@@ -19,5 +19,9 @@ public class Main {
 
         System.out.println(personA.getFriends());
         System.out.println(personB.getFriends());
+
+        personRepository.matchFriend(personB, personA);
+
+
     }
 }

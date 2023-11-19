@@ -25,4 +25,14 @@ public class PersonRepository {
     public void setFriends(List<Person> friends) {
         this.friends = friends;
     }
+
+    public void matchFriend(PersonRepository person1, PersonRepository person2){
+        for (Person friend1 : person1.getFriends()){
+            for (Person friend2 : person2.getFriends()){
+                if (friend1.getName().contains(friend2.getName())){
+                    System.out.println("Match friends = "+friend1);
+                }
+            }
+        }
+    }
 }

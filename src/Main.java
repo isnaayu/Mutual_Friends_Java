@@ -25,6 +25,7 @@ public class Main {
         personA.deleteFriend("susi");
         System.out.println(personA.getFriends());
 
+        personB.searchFriend("agus");
 
     }
 }

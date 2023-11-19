@@ -47,4 +47,14 @@ public class PersonRepository {
             }
         }
     }
+
+    public void searchFriend(String searchName){
+        for (Person person: friends){
+            if (person.getName().contains(searchName)){
+                System.out.println("Name found = "+searchName);
+                return;
+            }
+        }
+        System.out.println("friends not found");
+    }
 }

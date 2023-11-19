@@ -2,6 +2,7 @@ package model;
 
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class PersonRepository {
@@ -32,6 +33,17 @@ public class PersonRepository {
                 if (friend1.getName().contains(friend2.getName())){
                     System.out.println("Match friends = "+friend1);
                 }
+            }
+        }
+    }
+
+    public void deleteFriend(String friendName){
+        Iterator<Person> iterator = friends.iterator();
+        while (iterator.hasNext()){
+            Person person = iterator.next();
+            if (person.getName().equals(friendName)){
+                iterator.remove();
+                System.out.println("Friend Deleted!");
             }
         }
     }

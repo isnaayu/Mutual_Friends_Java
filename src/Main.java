@@ -22,6 +22,9 @@ public class Main {
 
         personRepository.matchFriend(personB, personA);
 
+        personA.deleteFriend("susi");
+        System.out.println(personA.getFriends());
+
 
     }
 }
